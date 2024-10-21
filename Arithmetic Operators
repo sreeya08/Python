@@ -1,0 +1,9 @@
+a = 15
+b = 6
+print(a + b) #output: 21
+print(a - b) #output: 9
+print(a * b) #output: 90
+print(a / b) #output: 2.5
+print(a % b) #output: 3
+print(a ** b) #output: 1139
+print(a // b) #output: 2
