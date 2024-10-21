@@ -1,0 +1,35 @@
+from tkinter import*
+from tkinter import messagebox
+#tkinter is the module used to
+#create GUI
+#initialize window
+window=Tk()
+window.geometry("500x450")
+window.config(bg="black")
+window.title("VIRUS")
+#user defined functions
+def Virus():
+    bodytemp=int(e1.get())
+    breathlevel=int(e2.get())
+    if(102 > bodytemp > 100 and breathlevel < 65):
+      messagebox.showinfo("STATUS","Corona  Welcomes YOU")
+    else:
+        messagebox.showinfo("STATUS","Corona saying Bye to YOU")
+#label1: bloodtemp
+l1=Label(window,text="Blood Temp:",font=30)
+l1.grid(row=0,column=0)
+#entry box
+e1=Entry(window)
+e1.grid(row=0,column=1)
+#label2: aadhar name
+l2=Label(window,text="Blood Level:",font=30)
+l2.grid(row=1,column=0)
+#entry box
+e2=Entry(window)
+e2.grid(row=1,column=1)
+#button: enroll
+b1=Button(window,text="ENROLL",command=Virus)
+b1.grid(row=2, column=1)
+
+
+window.mainloop()
