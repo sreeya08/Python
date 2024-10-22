@@ -1,0 +1,7 @@
+def cal_bmi(weight,height):
+    bmi = (weight / (height ** 2))
+    return bmi
+weight = 65
+height = 1.75
+bmi = cal_bmi(weight,height)
+print(f"BMI:{bmi:.2f}")
