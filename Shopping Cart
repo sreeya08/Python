@@ -1,0 +1,10 @@
+def cal_total_price(price,quantity,tax_rate):
+    subtotal = price * quantity
+    tax = subtotal * (tax_rate / 100)
+    total = subtotal + tax
+    return total
+price_per_item = 200
+quantity = 5
+tax_rate = 10
+total_price = cal_total_price(price_per_item,quantity,tax_rate)
+print(f"total price: ${total_price:.2f}")
