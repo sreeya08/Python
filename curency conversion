@@ -1,0 +1,7 @@
+def currency_converter(amount_usd,exchange_rate):
+    amount_inr = amount_usd * exchange_rate
+    return amount_inr
+amount_eur = 200
+exchange_rate = 0.90
+amount_eur = currency_converter(amount_eur,exchange_rate)
+print(f"${amount_eur} USD is equal to €{amount_eur:.2f} EUR")
