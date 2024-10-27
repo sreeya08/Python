@@ -1,0 +1,139 @@
+#Assignment 1: Online Shopping Discount System:
+Design a Python program for an e-commerce platform that applies different discounts based on the total cart value. The discount rules are as follows:
+#⁠  ⁠If the cart value is above $500, apply a 20% discount.
+#⁠  ⁠If the cart value is between $200 and $500, apply a 10% discount.
+#⁠  ⁠If the cart value is below $200, no discount is applied.
+
+cartvalue=int(input("enter the cart value: $"))
+if (cartvalue>500):
+  print("20% discount")
+elif(200<=cartvalue>500):
+  print("10% discount")
+elif(cartvalue<=200):
+  print("no discount")
+
+#Assignment 2: Employee Bonus System:
+Write a program for a company that awards bonuses to its employees based on their years of service:
+•⁠  ⁠If an employee has worked for more than 10 years, they receive a 15% bonus on their salary.
+•⁠  ⁠If they have worked between 5 and 10 years, they receive a 10% bonus.
+•⁠  ⁠Employees with less than 5 years of service receive a 5% bonus.'''
+
+employee=int(input("enter the years of service: years"))
+if(employee>10):
+  print("15% discount")
+elif(5<=employee<=10):
+  print("10% discount")
+elif(employee<5):
+  print("5% discount")
+
+#assignment 3: Banking System - Loan Eligibility:
+In a banking system, loan eligibility is determined based on the following criteria:
+•⁠  ⁠If the applicant's credit score is above 750, they are eligible for the loan.
+•⁠  ⁠If the credit score is between 650 and 750, they are eligible for a loan with an increased interest rate.
+•⁠  ⁠If the credit score is below 650, they are not eligible for a loan.
+Write a program to check loan eligibility based on the applicant's credit score.'''
+
+loaneligibility=int(input("enter the credit score"))
+
+if(loaneligibility>750):
+  print("eligible for loan")
+elif(650<=loaneligibility<=750):
+  print("They are eligible for a loan with an increased interest rate") 
+elif(loaneligibility<650):
+  print("not eligible for loan")
+
+#Assignment 4: Restaurant Order Management System:
+Question:
+Create a program for a restaurant that calculates the total cost of an order.
+ If the order total is over $100, the customer gets a 5% discount. 
+ The program should also check if the customer is a loyalty program member.
+ If they are a member, they get an additional 5% discount on top of any other discounts.
+
+res_order = int(input("total cost of an order: $"))
+member = int(input("customer is a loyalty program member(1 for yes/0 for no): "))
+if res_order > 100 and member == 1:
+  print("10% discount") 
+elif res_order > 100 and member == 0:
+  print("5% discount")
+else:
+  print("no discount")
+
+#Assignment 5: Grade Calculator for Students:
+Write a Python program to calculate the grade of a student based on their average score in five subjects. The grading criteria are as follows:
+•⁠  ⁠Score >= 90: Grade A
+•⁠  ⁠80 <= Score < 90: Grade B
+•⁠  ⁠70 <= Score < 80: Grade C
+•⁠  ⁠60 <= Score < 70: Grade D
+•⁠  ⁠Score < 60: Fail
+'''
+score=int(input("enter the score:"))
+if(score>=90):
+  print("Grade A")
+elif(80<=score<90):
+  print("Grade B")
+elif(70<=score<80):
+  print("Grade C")
+elif(60<=score<70):
+  print("Grade D")
+elif(score<60):
+  print("Fail")     
+
+#Assignment 6: Traffic Light Simulation:
+Create a program that simulates a traffic light system based on user input:
+•⁠  ⁠If the input is "Red", print "Stop".
+•⁠  ⁠If the input is "Yellow", print "Caution".
+•⁠  ⁠If the input is "Green", print "Go".
+'''
+lightcolor = input("Enter the traffic light color (Red, Yellow, Green): ")
+
+if lightcolor == "Red":
+    print("Stop")
+elif lightcolor == "Yellow":
+    print("Caution")
+elif lightcolor == "Green":
+    print("Go")
+else:
+    print("Invalid input.")
+
+#Assignment 7: Fitness App - BMI Calculator:
+Create a BMI (Body Mass Index) calculator that takes the user’s height and weight as input and calculates their BMI. Based on the BMI, provide feedback:
+•⁠  ⁠BMI < 18.5: Underweight
+•⁠  ⁠18.5 <= BMI < 24.9: Normal weight
+•⁠  ⁠25 <= BMI < 29.9: Overweight
+•⁠  ⁠BMI >= 30: Obesity'''
+
+BMI=float(input("enter the BMI:"))
+if(BMI<18.5):
+  print("Underweight")
+elif(18.5 <= BMI < 24.9):
+  print("Normal weight")
+elif(25<= BMI <29.9):
+  print("Overweight")
+elif(BMI>=30):
+  print("Obesity") 
+
+#Assignment 8: Movie Ticket Booking System:
+Create a Python program for a movie ticket booking system. The system charges differently based on the customer's age:
+•⁠  ⁠Below 18 years: $8 per ticket
+•⁠  ⁠Between 18 and 60 years: $12 per ticket
+•⁠  ⁠Above 60 years: $10 per ticket'''
+movieticket=int(input("enter the age: $"))
+if(movieticket<18):
+  print("8 per ticket")
+elif(18<=movieticket<=60):
+  print("12 per ticket")
+elif(movieticket>60):
+  print("10 per ticket")
+
+#Assignment 9: Utility Bill Calculator:
+Design a utility bill calculator for a power company. The pricing is based on usage:
+•⁠  ⁠If the usage is less than 100 units, the charge is $0.5 per unit.
+•⁠  ⁠If the usage is between 100 and 300 units, the charge is $0.75 per unit.
+•⁠  ⁠If the usage is above 300 units, the charge is $1 per unit.'''
+utilitybill=int(input("enter the usage:"))
+if(utilitybill<100):
+  print("$0.5 per unit")
+elif(100<=utilitybill<=300):
+  print("0.75 per unit")
+elif(utilitybill>300):
+  print("1 per unit")
