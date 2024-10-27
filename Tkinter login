@@ -1,0 +1,28 @@
+from tkinter import *
+from tkinter import messagebox
+
+windows=Tk()
+windows.geometry("250x200")
+windows.title("login")
+
+#body of the window
+def wish():
+    messagebox.showinfo("Hello","did you login")
+
+#labels
+L1=Label(windows, text="enter ur name")
+L1.grid(row=0,column=0)
+L2=Label(windows,text="enter ur number")
+L2.grid(row=1,column=0)
+
+#entrybox
+e1=Entry(windows,width=20)
+e1.grid(row=0,column=2)
+e2=Entry(windows,width=20)
+e2.grid(row=1,column=2)
+
+#button
+b1=Button(windows,text="click me" ,command=wish)
+b1.grid(row=4,column=2)
+
+windows.mainloop()
