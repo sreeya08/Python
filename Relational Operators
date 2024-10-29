@@ -1,8 +1,0 @@
-a = 30
-b = 40
-print(a == b) # Output: False
-print(a != b) # Output: True
-print(a > b)  # Output: False
-print(a < b)  # Output: True
-print(a >= 10) # Output: True
-print(a <= 20) # Output: False
