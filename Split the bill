@@ -1,7 +1,0 @@
-def split_bill(total_price,num_people):
-  amount_per_person = total_price / num_people
-  return amount_per_person
-total_price = 2000
-num_people = 10
-amount_per_person = split_bill(total_price,num_people)
-print(f"Amount each person pays: ${amount_per_person:.2f}")
