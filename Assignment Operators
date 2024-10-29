@@ -1,5 +1,0 @@
-a = 5
-a += 4 # Equivalent to a = a + 3
-print(a) # Output: 9
-a *= 2 # Equivalent to a = a * 2
-print(a) # Output: 18
