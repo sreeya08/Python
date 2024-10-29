@@ -1,0 +1,27 @@
+1.write a python program to valdidate account opening at a bank
+'''business requirements:
+*PAN CARD IS mandatory
+*AADHAR card is mandatory
+*Address proof is madatory:
+      voter id
+      gas bill
+      electrical bill
+      HRA
+      post paid bill
+      notory'''
+code:
+pancard=False
+aadhar=True
+electrical_bill=False
+gas_bill=True
+voter_id=False
+HRA=True
+post_paid_bill=False
+notory=False
+if(pancard==True or aadhar==True or electrical_bill==True or gas_bill==True or voter_id==True or HRA==True or post_paid_bill==True or notory==False):
+  print("ur eligible to take an account with our bank")
+else:
+  print("hey ur not suppose to be not eligible to open an account with according RBI rules")
+
+
+  
