@@ -1,9 +1,0 @@
-def cal_emi(principal,annual_rate,months):
-    monthly_rate = (annual_rate/(12*100))
-    emi = (principal * monthly_rate * (1 + monthly_rate) ** months) / ((1 + monthly_rate) ** months - 1)
-    return emi
-loan_amount = 100000
-annual_rate = 20
-loan_tenure = 36
-emi = cal_emi(loan_amount,annual_rate,loan_tenure)
-print(f"EMI: ${emi:.2f}")
