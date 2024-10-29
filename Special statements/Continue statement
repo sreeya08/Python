@@ -1,0 +1,20 @@
+#write a python program to validate gmail
+# should not use _ underscore
+# to implment scenario we must use break
+gmail=input("enter gmail id")
+for char in gmail:
+    print(char,end="")
+    if(char == "_"):
+        print("\nunder score _ occurred, kindly use only a-z 0-9 . operator as part mail")
+        continue
+print("\n")
+'''assignment1: write a python program using break 
+to stop working money dispensary machine 
+when fake note series detected'''
+list_of_series=[1111,1112,1113,1114,1121,1122,1115,1116]
+#here 1121 and 1122 are fake note series.
+for i in list_of_series:
+    print(i,end=" ")
+    if(i==1121 or i==1122):
+        print("\nfake note series detected:\n")
+        continue
