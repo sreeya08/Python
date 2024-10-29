@@ -1,0 +1,5 @@
+a = True
+b = False
+print(a and b)#output: False
+print(a or b) #output: True
+print(not b)  #output: True
