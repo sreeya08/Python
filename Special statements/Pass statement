@@ -1,0 +1,27 @@
+#create abstract or empty class
+
+class smart_watch:
+    pass
+
+class drone:
+    pass
+#create abstract or empty method/function
+
+def man_can_fly(p1,p2,pn):
+    pass
+
+def bike_can_fly(p1,p2,pn):
+    pass
+
+def snake_can_fly(p1,p2,pn):
+    pass
+
+def men_can_give_birth(p1,p2,pn):
+    pass
+
+def chat_bot_for_medical_recomendation(p1,p2):
+    pass
+#create abstract or empty loop
+
+while(10<5):
+    pass
