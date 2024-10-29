@@ -1,9 +1,0 @@
-def calculate_tip(total_bill,tip_percentage):
-    tip = total_bill * (tip_percentage / 100) 
-    total_with_tip = total_bill + tip
-    return tip,total_with_tip
-total_bill = 200
-tip_percentage = 10
-tip,total_with_tip = calculate_tip(total_bill,tip_percentage)
-print(f"Tip amount: ${tip:.2f}")
-print(f"Total amount along with tip: ${total_with_tip:.2f}")
