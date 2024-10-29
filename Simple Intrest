@@ -1,9 +1,0 @@
-# Simple Interest Calculation
-def cal_simple_interest(principal, rate, time):
-    simple_interest = (principal * rate * time) / 100
-    return simple_interest
-P = 100
-R = 50
-T = 30
-interest = cal_simple_interest(P, R, T)
-print(f"Simple Interest: {interest}")
