@@ -1,9 +1,0 @@
-def area_perimeter_rectangle(length,breadth):
-    area=length*breadth
-    perimeter=2*(length+breadth)
-    return area,perimeter
-length = 15
-breadth = 10
-area,perimeter=area_perimeter_rectangle(length,breadth)
-print(f"area of rectangle:{area}")
-print(f"perimeter of rectangle:{perimeter}")
