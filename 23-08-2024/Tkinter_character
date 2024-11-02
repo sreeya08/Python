@@ -1,0 +1,29 @@
+#2. write a python program given character is vowel or consonant or digit or special character
+
+from tkinter import *
+from tkinter import messagebox
+window=Tk()
+window.geometry("500x450")
+window.title("Vowel_characters")
+
+def characters_validation():
+    character =e1.get()
+    if(character in "AEIOUaeiou"):
+        messagebox.showinfo("STATUS","It is a vowel")
+    elif(character in "0123456789"):
+        messagebox.showinfo("STATUS", "It is a digit")
+    elif(character in "@#$%^&*!"):
+        messagebox.showinfo("STATUS", "It is a special Character")
+    else:
+        messagebox.showinfo("STATUS", "It is a consonant")
+
+#label1:
+l1=Label(window,text="character", font=30)
+l1.grid(row=0,column=0)
+#entrybox1:
+e1=Entry(window)
+e1.grid(row=0, column=1)
+#button:
+b1_sum=Button(window,text="Enter",command=characters_validation)
+b1_sum.grid(row=4,column=0)
+window.mainloop()
