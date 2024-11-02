@@ -1,0 +1,27 @@
+#1.write a python program given number is positive or negative or zero
+from tkinter import *
+from tkinter import messagebox
+
+window = Tk()
+window.geometry("500x450")
+window.title("Simple calculation")
+
+def simple_calculation():
+    number = int(e1.get())
+    if number>0:
+        messagebox.showinfo("status", "It is a Positive Number")
+    elif number<0:
+        messagebox.showinfo("status", "It is a Negative Number")
+    else:
+        messagebox.showinfo("status", "Zero")
+
+# label1:
+l1 = Label(window, text="Number", font=30)
+l1.grid(row=0, column=0)
+#entrybox1
+e1 = Entry(window)
+e1.grid(row=0, column=1)
+#button
+b1_sum = Button(window, text="Enter", command=simple_calculation)
+b1_sum.grid(row=4, column=0)
+window.mainloop()
