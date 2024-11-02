@@ -1,0 +1,27 @@
+#3. write a python program given number is even or odd
+from tkinter import *
+from tkinter import messagebox
+
+window = Tk()
+window.geometry("500x450")
+window.title("Even and Odd numbers")
+
+
+def evenodd():
+    n = int(e1.get())
+    if (n % 2) == 0:
+        messagebox.showinfo("status", "It is a Even Number")
+    else:
+        messagebox.showinfo("status", "It is a Odd Number")
+
+
+# label1:
+l1 = Label(window, text="Number", font=30)
+l1.grid(row=0, column=0)
+#entrybox1
+e1 = Entry(window)
+e1.grid(row=0, column=1)
+# button
+b1_sum = Button(window, text="Enter", command=evenodd)
+b1_sum.grid(row=4, column=0)
+window.mainloop()
