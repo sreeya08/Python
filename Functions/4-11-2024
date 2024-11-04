@@ -1,1 +1,39 @@
+1.#emp_module consist of user defined functions definitions related employees
+def emp_total_nos():
+    total_no_emp=30
+    print("Total no.of current employees: ",total_no_emp)
+def emp_details():
+    list1=["ravi","rama","krishna","seetha"]
+    print("Empolyees Names:",list1)
+def emp_bonus_details(sal):
+    bonus=(sal*20)/100
+    print("Emp Bonus:",bonus)
 
+To Test QA_testing:
+from OCTOBER_2024_PACKAGE.contract_emp_package import con_module as ce
+sal=32000
+ce.emp_details()
+ce.emp_bonus_details(sal)
+ce.emp_total_no()
+
+
+2.#emp_module consist of user defined functions definitions
+#related employees
+def emp_total_nos():
+    total_no_emp=20
+    print("Total no.of current employees: ",total_no_emp)
+def emp_details():
+    list1=["ravi","rama","krishna","seetha"]
+    print("Empolyees Names:",list1)
+def emp_bonus_details(sal):
+    bonus=(sal*15)/100
+    print("Emp Bonus:",bonus)
+
+To Test employee:
+from OCTOBER_2024_PACKAGE.emp_related_package import emp_module
+
+#through module name followed by function name we can call function
+basic_sal=18000
+emp_module.emp_bonus_details(basic_sal)
+emp_module.emp_details()
+emp_module.emp_total_nos()
