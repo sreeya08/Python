@@ -1,1 +1,8 @@
-
+#1. write a python program given number is positive or negative or zero
+n=int(input("enter a number"))
+if(n>0):
+    print("number is positive")
+elif(n<0):
+    print("number is negative")
+else:
+    print("number is zero")
