@@ -1,0 +1,24 @@
+from tkinter import *
+from tkinter import messagebox
+
+window = Tk()
+window.geometry("500x450")
+window.title("BANKING SYSTEM")
+
+def banking_system():
+    loan_Eligibility=int(e1.get())
+    if(loan_Eligibility>750):
+        messagebox.showinfo("status","There are eligible for loan")
+    elif(650<=loan_Eligibility<=750):
+        messagebox.showinfo("status","They are eligible for a loan with an increased interest rate.")
+    elif(loan_Eligibility<650):
+        messagebox.showinfo("status","There is no loan.")
+l1 = Label(window, text="order", font=30)
+l1.grid(row=0, column=0)
+#entrybox1
+e1 = Entry(window)
+e1.grid(row=0, column=1)
+# button
+b1_sum = Button(window, text="Enter", command=banking_system)
+b1_sum.grid(row=4, column=0)
+window.mainloop()
