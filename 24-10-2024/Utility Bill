@@ -1,1 +1,31 @@
+from tkinter import*
+from tkinter import messagebox
 
+
+window=Tk()
+window.geometry("500x400")
+window.config(bg="white")
+window.title("Utility Bill")
+
+def check():
+    data=float(e1.get())
+    if (data< 100):
+        messagebox.showinfo("STATUS","The charge is $0.5 per unit.")
+    elif (100 <= data < 300):
+        messagebox.showinfo("STATUS","The charge is $0.75 per unit")
+    elif (data >= 300):
+        messagebox.showinfo("STATUS","The charge is $1 per unit")
+    else:
+        messagebox.showinfo("STATUS","No charge")
+
+#label1
+l1=Label(window,text="Data",font=40)
+l1.grid(row=0,column=0)
+#entrybox1
+e1=Entry(window)
+e1.grid(row=0,column=1)
+#button
+b1=Button(window,text="ENTER",command=check)
+b1.grid(row=2,column=2)
+
+window.mainloop()
