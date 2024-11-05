@@ -1,8 +1,54 @@
-#1. write a python program given number is positive or negative or zero
-n=int(input("enter a number"))
-if(n>0):
-    print("number is positive")
-elif(n<0):
-    print("number is negative")
-else:
-    print("number is zero")
+#write a python to print in range of 10
+for k in range(10):
+	print(k)
+
+#write a python to print roll no from 501 to 560
+for j in range(501,561):
+    print(j,end=" ")
+print("\n")
+
+#write a python program
+for z in range(1,11,2):
+    print(z,end="  ")
+
+#write a python to print sequence of number with skipping value 3 using for loop and range()
+#input: 1 - 20
+#output: 1 5 9 12
+for i in range(1,21,4):
+    print(i,end="  ")
+
+#write a python program to print welcome message 10 times using for loop
+for k in range(10):
+    print("welcome",end=" ")
+
+#write a python program to display each character from the string using for loop
+name="venkat"
+for i in name:
+    print(i,end=" ")
+
+#write a python program to read and print each element from list using for loop
+#list_of_student_names=["anu","banu","chinnu","dhanu","lakshmi"]
+#for j in list_of_student_names:
+#print(j,end=" ")
+
+#write a python program to read "balu" from the list and print using for loop
+list_of_student_names=["anu","balu","chinnu","dhanu","lakshmi"]
+for j in list_of_student_names:
+  if(j == "balu"):
+    print(j,end=" ")
+
+#write a python program to print even numbers from given list
+list1=[501,503,78,69,31,59,143,12,478]
+for i in list1:
+    if(i%2==0):
+        print("even no:",i)
+    else:
+        print("odd no:",i)
+
+#write a python program to calculate avg salary about all salaries using for loop
+list_of_salaries=[50000,60000,45000,35000,89000,32000,5000,6000]
+total_salary = 0
+for k in list_of_salaries:
+   total_salary += k
+print(total_salary/len(list_of_salaries))
+
