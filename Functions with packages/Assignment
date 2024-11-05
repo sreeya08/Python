@@ -1,3 +1,7 @@
+Question:Weather Application 
+
+#fectching the weather:
+ 
 def get_current_weather(city):
     weather_data = {
         "New York": {"temperature": 25, "condition": "Sunny"},
@@ -5,3 +9,44 @@ def get_current_weather(city):
         "Mumbai": {"temperature": 30, "condition": "Rainy"},
     }
     return weather_data.get(city, {"temperature": "N/A", "condition": "N/A"})
+
+#analyzing the weather:
+
+def cal_avg_temp(weather_data):
+    total_temp = 0
+    count = 0
+    for city, data in weather_data.items():
+        if data["temperature"] != "N/A":
+            total_temp += data["temperature"]
+            count += 1
+            if count == 0:
+                return None
+            return total_temp / count
+def check_weather_trend(city_weatherdata):
+    condition = city_weatherdata["condition"]
+    if condition == "Sunny":
+        return "The weather is clear. Enjoy your day."
+    elif condition == "Rainy":
+        return "It looks rainy. Don't forget your umbrella."
+    elif condition == "Cloudy":
+        return "It's cloudy. It might rain later."
+    else:
+      return "Weather data unavailable."
+
+#testing the weather:
+
+from weather_app import fetch_weather
+from weather_app import analyze_weather
+list_city =  ["New York", "London", "Mumbai", "Paris"]
+weather_data = {city: fetch_weather.get_current_weather(city) for city in list_city}
+for city, data in weather_data.items():
+    print(f"{city}: {data['temperature']}°C, {data['condition']}")
+    average_temp = analyze_weather.cal_avg_temp(weather_data)
+    if average_temp is not None:
+        print(f"\nAverage Temperature: {average_temp:.2f}°C")
+    else:
+        print("\nNo valid temperature data to calculate average.")
+        city = "New York"
+        city_weather_data = weather_data[city]
+        trend_message = analyze_weather.check_weather_trend(city_weather_data)
+        print(f"\nWeather trend for {city}: {trend_message}")
