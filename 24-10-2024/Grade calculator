@@ -1,0 +1,31 @@
+from tkinter import *
+from tkinter import messagebox
+
+window = Tk()
+window.geometry("500x450")
+window.title("GRADES")
+
+
+def grade_calculator():
+    Grade = int(e1.get())
+    if (Grade >= 90):
+        messagebox.showinfo("status", "Grade A")
+    elif (80 <= Grade < 90):
+        messagebox.showinfo("status", "Grade B")
+    elif (70 <= Grade < 80):
+        messagebox.showinfo("status", "Grade C")
+    elif (60 <= Grade < 70):
+        messagebox.showinfo("status", "Grade D")
+    else:
+        messagebox.showinfo("status", "FAIL")
+
+# label1:
+l1 = Label(window, text="Score", font=30)
+l1.grid(row=0, column=0)
+#entrybox1
+e1 = Entry(window)
+e1.grid(row=0, column=1)
+# button
+b1_sum = Button(window, text="Enter", command=grade_calculator)
+b1_sum.grid(row=4, column=0)
+window.mainloop()
