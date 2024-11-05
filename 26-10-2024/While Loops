@@ -1,1 +1,60 @@
+#write a python program using while loop to print natural numbers from 1 to 50.
+i=1
+n=50
+while(i<=n):
+    print("natural numbers:\n",i)
+    i+=1 #i=i+1
 
+#write a python program to execute body of the while infinite no of times
+while(True):
+    print("welcome",end=" ")
+
+#write a python program to find sum of n numbers using while loop
+i=1
+sum = 0
+n = 10000
+while(i<=n):
+    sum+=i
+    i+=1
+print("sum of n numbers:",sum)
+
+#write a python to find sum of n numbers using for loop
+sum = 0
+for i in range(1,10) :
+    sum+=i
+
+print("sum of n numbers:",sum)
+
+#write a python program to find a factorial of a given number using for loop and while loop
+factorial = 1
+for i in range(1,10):
+   factorial*=i
+print("factorial of a number:",factorial)
+print("using while loop:\n")
+n=1
+j=1
+factorial=1
+while(j<=n):
+    factorial*=j
+    j+=1
+print("factorial of a given number:",factorial)
+
+#write a python program using while loop for BANK ATM PIN Count attempt
+'''business rules:
+1.create temporary password
+2.ask password to be enter dynamically
+3. if the input is incorrect,notify them of remaining attempts
+4. if the input is correct,grant the access
+5. if they fail after 3 attempts,lock the account.'''
+reg_pin=1234
+attempts=0
+while(attempts<3):
+    login_pin=int(input("enter ur pin number"))
+    if(reg_pin==login_pin):
+        print("grant access")
+        break
+    else:
+        attempts=attempts+1
+        print("incorrect password: no of left chances",attempts)
+if attempts==3:
+    print("ur account has been locked due too many incorrect attempts made")
