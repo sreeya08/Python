@@ -1,1 +1,35 @@
+1.built in functions
 
+import math
+import string
+#math is name of the module from which we can inherit
+#readymade functions
+print(math.factorial(5))
+print(math.sqrt(25))
+print(math.log(2,2))
+fn="venkat"
+ln="naik"
+print(fn+ln)
+
+2.customized functions
+
+def fact(number):
+    i=1
+    fact=1
+    while(i<=number):
+        fact=fact*i
+        i=i+1
+    print("result of factorial:",fact)
+def sum_of_three(a,b,c):
+    return a+b+c
+def mul(a,b):
+    return a*b
+def mod(x,y):
+    return x%y
+
+#calling function:
+from FUNCTIONS_CONCEPTS import customized_function_demo as f
+res=f.mul(2,5)
+res2=f.mod(10,3)
+print("result:",res)
+print("remainder:",res2)
