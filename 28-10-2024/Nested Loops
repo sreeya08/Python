@@ -1,1 +1,39 @@
+# write a python program to display available colors and sizes of the products in an ecomerce app using nested loops.
+#business requirements:
+'''1.create a list of colors like red,blue,green
+2.create a list to hold sizes like small,medium,large
+3.use nested loops to generate all the possible combinations of colors associated with sizes for user to select appropriate product.'''
 
+colors=['red','green','blue']
+sizes=['small','medium','large']
+for row in colors:
+  for col in sizes:
+    print(f"color: {row},size :{col}")
+
+#program to perform matrix addition:
+
+x=[[1,2,3],
+   [4,5,6],
+   [7,8,9]]
+y=[[9,8,7],
+  [6,5,4],
+  [3,2,1]]
+res=[[0,0,0],
+     [0,0,0],
+     [0,0,0]]
+#nested outer loop for rows track
+for i in range(len(x)):
+  # for columns track we need inner loop
+  for j in range(len(x[0])):
+    #write a logic to perform addition 
+    res[i][j]=x[i][j]+y[i][j]
+#to display resultant matrix we need one for loop
+for z in res:
+  print(z)
+
+#write a python program to print multiplication table from 2 to 10 using nested loop:
+
+for i in range(2,11):
+  for j in range(1,11):
+    #print(f"{i}*{j}={i*j}")
+    print("%d * %d = %d"%(i,j,i*j))
