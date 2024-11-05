@@ -1,0 +1,40 @@
+#Assgnment4
+
+from tkinter import*
+from tkinter import messagebox
+
+
+window=Tk()
+window.geometry("500x400")
+window.config(bg="white")
+window.title("Restaurant Order Management System")
+
+def check():
+    data=int(e1.get())
+    membership=int(e2.get())
+    if(data>100 and membership == 1):
+        messagebox.showinfo("STATUS","10% discount")
+    elif(data>100 and membership == 0):
+        messagebox.showinfo("STATUS","5% discount")
+    else:
+        messagebox.showinfo("STATUS","No discount")
+
+
+
+#label1
+l1=Label(window,text="Data",font=40)
+l1.grid(row=0,column=0)
+#entrybox1
+e1=Entry(window)
+e1.grid(row=0,column=1)
+#label2
+l2=Label(window,text="membership",font=40)
+l2.grid(row=1,column=0)
+#e2
+e2=Entry(window)
+e2.grid(row=1,column=1)
+#button
+b1=Button(window,text="ENTER",command=check)
+b1.grid(row=2,column=2)
+
+window.mainloop()
