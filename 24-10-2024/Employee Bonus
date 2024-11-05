@@ -1,0 +1,25 @@
+from tkinter import *
+from tkinter import messagebox
+
+window = Tk()
+window.geometry("500x450")
+window.title("EMPLOYEE BONUS SYSTEM")
+def employee_bonus():
+    employee=int(e1.get())
+    if (employee > 10):
+        messagebox.showinfo("status","A 15% discount is applied")
+    elif (5 <= employee <= 10):
+        messagebox.showinfo("status","A 10% discount is applied")
+    elif (employee < 5):
+        messagebox.showinfo("status","A 5% discount is applied")
+    else:
+        messagebox.showinfo("status","no discount is applied")
+l1 = Label(window, text="bonus", font=30)
+l1.grid(row=0, column=0)
+# entrybox1
+e1 = Entry(window)
+e1.grid(row=0, column=1)
+# button
+b1_sum = Button(window, text="Enter", command=employee_bonus)
+b1_sum.grid(row=4, column=0)
+window.mainloop()
