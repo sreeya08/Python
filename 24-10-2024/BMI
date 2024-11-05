@@ -1,0 +1,33 @@
+'''Assignment 7: Fitness App - BMI Calculator
+Question:
+Create a BMI (Body Mass Index) calculator that takes the user’s height and weight as input and calculates their BMI. Based on the BMI, provide feedback:
+•	BMI < 18.5: Underweight
+•	18.5 <= BMI < 24.9: Normal weight
+•	25 <= BMI < 29.9: Overweight
+•	BMI >= 30: Obesity'''
+from tkinter import *
+from tkinter import messagebox
+
+window = Tk()
+window.geometry("500x450")
+window.config(bg="white")
+window.title("BMI CALCULATOR")
+def bmi_calculator():
+    BMI=float(e1.get())
+    if(BMI<18.5):
+        messagebox.showinfo("status","Underweight")
+    elif(18.5<=BMI<24.5):
+        messagebox.showinfo("status","Normal Weight")
+    elif(25<=BMI<29.5):
+        messagebox.showinfo("status","Overweight")
+    elif(BMI>=30):
+        messagebox.showinfo("status","obesity")
+l1 = Label(window, text="charge", font=30)
+l1.grid(row=0,column=0)
+# entrybox1
+e1 = Entry(window)
+e1.grid(row=0, column=1)
+# button
+b1_sum = Button(window, text="Enter", command=bmi_calculator)
+b1_sum.grid(row=4, column=0)
+window.mainloop()
