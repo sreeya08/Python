@@ -1,0 +1,30 @@
+'''Assignment 6: Traffic Light Simulation
+Question:
+Create a program that simulates a traffic light system based on user input:
+•	If the input is "Red", print "Stop".
+•	If the input is "Yellow", print "Caution".
+•	If the input is "Green", print "Go".'''
+from tkinter import *
+from tkinter import messagebox
+
+window = Tk()
+window.geometry("500x450")
+window.config(bg="white")
+window.title("TRAFFIC LIGHT STIMULATION")
+def traffic_stimulation():
+    Traffic_Light=str(e1.get())
+    if(Traffic_Light == "Red"):
+        messagebox.showinfo("status","STOP")
+    elif(Traffic_Light == "Yellow"):
+        messagebox.showinfo("status","Caution")
+    elif(Traffic_Light == "Green"):
+        messagebox.showinfo("status","Go")
+l1 = Label(window, text="Light", font=30)
+l1.grid(row=0, column=0)
+# entrybox1
+e1 = Entry(window)
+e1.grid(row=0, column=1)
+# button
+b1_sum = Button(window, text="Enter", command=traffic_stimulation)
+b1_sum.grid(row=4, column=0)
+window.mainloop()
