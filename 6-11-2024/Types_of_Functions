@@ -1,0 +1,29 @@
+#a function with arguments and with return type
+def login_credentials2(uid,pwd):
+    #validating credentials
+    ruid=11445566
+    rpwd="alladi@123"
+    if(uid==ruid and pwd==rpwd):
+        return "login successful"
+    else:
+        return "wrong credentials"
+        
+#a function with arguments and without return type
+def login_credentials(uid,pwd):
+    #validating credentials
+    ruid=11445566
+    rpwd="alladi@123"
+    if(uid==ruid and pwd==rpwd):
+        print("login successful")
+    else:
+        print("wrong credentials")
+        
+#a function without arguments with return type
+def system_properties_info():
+    return "system RAM: 8 GB"
+
+#a function without arguments and without return type'''
+def system_properties_info2():
+    print("system RAM: 8 GB")
+    print("system OS:windows 11")
+    print("system SSD: 512 GB")
