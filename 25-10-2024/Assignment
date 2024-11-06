@@ -1,0 +1,16 @@
+#write a python program to calculate total orders of items from the online app
+products_prices=[56.3,489.50,78.65,50.00,102.00]
+total_orders=0
+for i in products_prices:
+   total_orders += i
+print(total_orders)
+o/p:776.4499999999999
+
+#write a python program usisg for loop to calculate interest for multiple customers at bank
+bank_balances=[5000,6000,7000,9000,10000]
+rate_of_interest=0.5
+total_interest=0
+for j in bank_balances:
+   total_interest += j*rate_of_interest
+print(total_interest)
+o/p:18500.0
