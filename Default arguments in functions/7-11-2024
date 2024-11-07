@@ -1,0 +1,48 @@
+from tkinter import *
+from tkinter import messagebox
+
+# initialize window
+window = Tk()
+#window.geometry("250x150")
+window.title("PRNSION_ELIGIBILITY")
+# body of the window
+#DEFAULT ARGUMENT TO THE FUNCTION:
+def pension_eligibility():
+    NAME=str(e1.get())
+    AADHARNUMBER=str(e2.get())
+    PHONE=str(e3.get())
+    AGE=int(e4.get())
+    T1=NAME,AADHARNUMBER,PHONE,AGE
+    if(AGE>=50):
+        #messagebox.showinfo("status:ur eligible for the pension",T1)
+        res="ur eligible for pension"
+        text_area.config(text=res)
+
+    else:
+        messagebox.showinfo("status","ur not eligible for the pension scheme")
+
+l1 = Label(window, text="ENTER NAME")
+l1.grid(row=0, column=0)
+l2 = Label(window, text="ENTER AADHAR NUMBER")
+l2.grid(row=1, column=0)
+l3 = Label(window, text="ENTER PHONE NUMBER")
+l3.grid(row=2, column=0)
+l4 = Label(window, text="ENTER AGE")
+l4.grid(row=3, column=0)
+# entry boxes
+e1 = Entry(window, width=10)
+e1.grid(row=0, column=2)
+e2 = Entry(window, width=10)
+e2.grid(row=1, column=2)
+e3 = Entry(window, width=10)
+e3.grid(row=2, column=2)
+e4 = Entry(window, width=10)
+e4.grid(row=3, column=2)
+# button
+b1 = Button(window, text="SUBMIT", command=pension_eligibility)
+b1.grid(row=4, column=2)
+
+text_area=Label(window)
+text_area.grid(row=7,column=5)
+
+window.mainloop()
