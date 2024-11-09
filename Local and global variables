@@ -1,0 +1,32 @@
+Write a function that calculates the salary of an employee based on their working
+hours, hourly rate, and any overtime hours they may have. Include default values
+for hourly rate and overtime pay.
+Requirements:
+Sample Code:
+ If the employee works overtime (more than 40 hours), the overtime pay rate
+should be 1.5 times the hourly rate.
+ Default hourly rate:$20 per hour.'''
+
+'''def employee_salary(hours,hourlyrate,overtime):
+    if hours>40:
+        return (hourlyrate*40)+(hourlyrate*1.5*overtime)
+    else:
+        return (hourlyrate*hours)+(hourlyrate*overtime)'''
+
+#ass2:
+'''Create a function that takes a variable number of arguments representing prices of 
+items in a shopping cart. The function should return the total price. Also, apply a 
+discount if the total amount exceeds a certain threshold. 
+Requirements: 
+ Apply a 10% discount if the total is more than $100.'''
+
+
+'''def calculate_total(*items):
+        total = sum(items)
+        if total > 100:
+            discount = total * (10 / 100)
+            after_discount_total = total - discount
+            print("total price:", after_discount_total)
+        else:
+            print("after discount items price:", total)
+
