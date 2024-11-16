@@ -1,0 +1,97 @@
+from tkinter import *
+import pymongo
+class application:
+    def __init__(self,window):
+        self.window = window
+        window.title("Job Application Form")
+        window.geometry("500x500")
+        window.configure(bg="blue")
+        self.name = StringVar()
+        self.phone = StringVar()
+        self.email = StringVar()
+        self.position = StringVar()
+        self.resume = StringVar()
+        self.cover_letter = StringVar()
+        l1 = Label(window, text="Name",font=40)
+        l1.grid(row=0, column=0)
+        e1 = Entry(window)
+        e1.grid(row=0, column=1)
+        l2 = Label(window, text="Phone", font=40)
+        l2.grid(row=0, column=3)
+        e2 = Entry(window)
+        e2.grid(row=0, column=4)
+        l3 = Label(window, text="Email", font=40)
+        l3.grid(row=1, column=0)
+        e3 = Entry(window)
+        e3.grid(row=1, column=1)
+        l4 = Label(window, text="Position", font=40)
+        l4.grid(row=1, column=3)
+        e4 = Entry(window)
+        e4.grid(row=1, column=4)
+        l5 = Label(window, text="Resume", font=40)
+        l5.grid(row=2, column=0)
+        e5 = Entry(window)
+        e5.grid(row=2, column=1)
+        l6 = Label(window, text="Cover_Letter", font=40)
+        l6.grid(row=2, column=3)
+        e6 = Entry(window)
+        e6.grid(row=2, column=4)
+        b1 = Button(window, text="SUBMIT", command=self.enroll, bg="green")
+        b1.grid(row=10, column=0)
+        b2 = Button(window, text="UPDATE", command=self.update_info, bg="yellow")
+        b2.grid(row=10, column=2)
+        b3 = Button(window, text="DELETE", command=self.delete_info, bg="red")
+        b3.grid(row=10, column=4)
+    def enroll(self):
+        client = pymongo.MongoClient("mongodb://localhost:27017/")
+        db = client["job_db"]
+        coll = db["candidate_details"]
+        data = [
+            {
+                "name": self.name.get(),
+                "phone": self.phone.get(),
+                "email": self.email.get(),
+                "position": self.position.get(),
+                "resume": self.resume.get(),
+                "cover_letter": self.cover_letter.get(),
+
+            }
+        ]
+
+        x = coll.insert_many(data)
+        print(
+            "data has been inserted into desired collection, respective primary keys:\n",
+            x.inserted_ids,
+        )
+        self.clear()
+    def update_info(self):
+        client = pymongo.MongoClient("mongodb://localhost:27017")
+        db = client["employee_db"]
+        coll = db["employee_details"]
+        query = {"name": self.name.get()}
+        new_values = {"$set": {"phone": self.phone.get()}}
+        coll.update_one(query, new_values)
+        for x in coll.find():
+            print("ur updated data:\n", x)
+        self.clear()
+    def delete_info(self):
+        client = pymongo.MongoClient("mongodb://localhost:27017/")
+        db = client["Job_db"]
+        coll = db["employee_details"]
+        query = {"eposition": self.position.get()}
+        coll.delete_one(query)
+        print("ur record has been deleted")
+        for x in coll.find():
+            print("ur desired record deleted successfully:\n", x)
+        self.clear()
+    def clear(self):
+        self.name.set("")
+        self.phone.set("")
+        self.email.set("")
+        self.position.set("")
+        self.resume.set("")
+        self.cover_letter.set("")
+
+window = Tk()
+ob = application(window)
+window.mainloop()
