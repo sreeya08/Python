@@ -1,0 +1,24 @@
+Integrity Constraints:
+--------------------
+constraint means a rule to be followed while creating a table in database.
+following are constraints:
+----------------------
+NOT NULL : ensures that a column con not be null value
+UNIQUE:    Ensures that all the values in a column are different
+PRIMARY KEY: it indenfies a column uniquely
+             it is combination of NOT NULL + UNIQUE
+FOREIGN KEY: To make one table as parent and another table is child.in this situation child
+             table will have common column which is exist in parent table Hence child table has
+             the foreign key
+              ex: persons table: parent table
+                  order table: child table
+CHECK: Ensures that the values in a column satisfies certain condition
+DEFAULT: It sets the default value and when the user doesnot supply any value
+CREATE INDEX: used to create an index on table to improve retrieval speed.
+
+#INSERT INTO SAMPLE VALUES(101,"ANU");
+SELECT * FROM SAMPLE;
+#INSERT INTO SAMPLE VALUES(101,"BALU");
+SELECT * FROM SAMPLE;
+#DROP TABLE SAMPLE;
+SHOW TABLES;
