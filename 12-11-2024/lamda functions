@@ -1,0 +1,36 @@
+result=lambda a,b:a+b
+print(result(10,20))
+
+#write a python program to change lower string to uppercase using lambda function
+str1="alladi cloud training"
+target_str=lambda s:s.upper()
+print(target_str(str1))
+
+#write a python program upper to lower,title,swapcase,capitalize
+str2="ALLADI CLOUD TRAINING"
+t=lambda s:s.lower()
+print(t(str2))
+
+str3="alladi cloud training"
+p=lambda s:s.title()
+print(p(str3))
+
+str4="alladi cloud training"
+m=lambda s:s.swapcase()
+print(p(str4))
+
+str5="alladi cloud training"
+m=lambda s:s.capitalize()
+print(p(str5))
+
+#write a python program to find cube using def keyword and lambda
+
+def cube(x):
+    return x*x*x
+res=cube(5)
+print("cube res:",res)
+
+#using lambda function
+print("\nusing lambda:")
+lambda_cube=lambda x:x*x*x
+print(lambda_cube(5))
