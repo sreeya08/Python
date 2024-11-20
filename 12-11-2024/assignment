@@ -1,0 +1,60 @@
+#assignment1:Basic Lambda Function 
+
+add=(lambda a,b:a+b)
+result=add(5,8)
+print(result)
+
+
+
+#Assignment2:Lambda with filter()
+
+#using lambda functions to filter odd and even numbers
+numbers_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 13, 17, 19]
+target_odd_list = list(filter(lambda x: (x % 2 != 0),numbers_list))
+target_even_list = list(filter(lambda x: (x % 2 == 0),numbers_list))
+
+print(target_even_list)
+print(target_odd_list)
+
+
+
+#Assignment3: Lambda with map() 
+
+numbers_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 13, 17, 19]
+target_odd_list = list(map(lambda x:(x%2!=0), numbers_list))
+target_even_list =list(map(lambda x:(x%2==0), numbers_list))
+
+print(target_odd_list)
+print(target_even_list)
+
+
+
+#Assignment4:Lambda with reduce() 
+
+from functools import reduce 
+# List of numbers 
+numbers = [1, 2, 3, 4] 
+
+product = reduce(lambda x, y: x * y, numbers) 
+print(product) 
+
+
+
+#Assignment5: Lambda with sorted() 
+
+# List of tuples
+points = [(1, 2), (3, 1), (5, 3), (2, 4)]
+
+sorted_points = sorted(points, key=lambda x: x[1])
+print(sorted_points)
+
+
+
+#Assignment6:Lambda for Conditional Statements 
+
+even_odd = lambda x: 'Even' if x % 2 == 0 else 'Odd'
+# Using the lambda function
+result = even_odd(5)
+print(result)
+result = even_odd(8)
+print(result)
