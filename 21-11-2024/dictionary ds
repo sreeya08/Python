@@ -1,0 +1,6 @@
+#declarating the dictionary
+d1={} #empty dictionary
+d2={"roll":105,"name":"SREEYA","city":"Hyderabad"}
+print(d2)
+print(d2.keys())
+print(d2.values())
