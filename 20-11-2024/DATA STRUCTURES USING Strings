@@ -1,0 +1,52 @@
+#WAYS TO DECLARE STRINGS IN PYTHON
+#3 WAYS
+#USING ONE PAIR OF SINGLE QUOTES
+name='sreeya'
+print("single quotes", name)
+#double quotes
+city="hyderbad"
+print("double quotes", city)
+#using triple quotes
+address='''kukatpally'''
+print("triple quotes",address)
+
+#3 ways to retrieve elements from the string
+'''
+1. FORWARD INDEX/ POSITIVE INDEX/LEFT TO RIGHT READ
+2.BACKWARD INDEX/ NEGATIVE / RIGHT TO LEFT READ
+3.SLICE OPERATOR(:) USED TO EXTRACT RANGE OF VALUES
+'''
+string="software tech solutions"
+print("froward index")
+print(string[0]) #s
+print(string[1])  #o
+print(string[2]) #f
+print(string[3]) #t
+
+#backward index
+print("backward index")
+print(string[-1])  #s
+print(string[-2]) #n
+print(string[-3]) #o
+print(string[-4]) #i
+
+#slice indicate range from lower to upper according user window
+#use : colon
+#diplay tech as o/p
+print(string[9:13])
+print(string[0:23:3])
+print(string[::-1])
+
+#Operations applied on string
+'''
+comparison of string
+concatenation b/w string
+repetition of string
+length of string
+count of string
+index of string
+find substring of string
+replace of string
+joining of string
+split of string
+'''
