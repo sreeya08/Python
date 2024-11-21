@@ -1,0 +1,9 @@
+#DECLARATION OF TUPLE
+t1=()
+t2=(508,"sreeya","full stack","9432109870",20650.00)
+list1=[1122,1133,1143]
+t3=tuple(list1)
+print(t1)
+print(t2)
+print(list1)
+print(t3,type(t3))
