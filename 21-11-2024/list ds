@@ -1,0 +1,15 @@
+#DIFFERENT WAYS TO DECLARE LIST
+list1=[]
+list2=[505,"SREEYA",100000.00]
+str1="Malineni"
+list3=list(str1)
+print(l1)
+print(l2)
+print(l3)
+print(l2[0])
+print(l2[1])
+print(l2[2])
+print(l2[-3])
+print(l2[-2])
+print(l2[-1])
+print(l3[1:6])
