@@ -1,0 +1,11 @@
+#declaration
+s1={}
+print(type(s1)) #empty set can not created with {} , we have to use set()
+s2=set()
+print(type(s2))
+s3={503,"balu","singer","indian","hyd"}
+print(s3)
+s4={1,2,3,1,2,4,6,7}
+#duplicate can not be allowed
+print(s4)
+#set ds make for performing operations such as union(), intersection(), difference, subset(), and superset()
