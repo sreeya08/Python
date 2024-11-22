@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN PAGE</title>
+</head>
+<body>
+
+    <form>
+        <label for="uid">UID/EMAIL/Phone No</label>
+        <input type="text" id="uid" name="uid"><br><br>
+        <label for="pwd">PASSWORD</label>
+        <input type="text" id="pwd" name="pwd"><br><br>
+        <input type="submit" value="LOGIN"><br><br><br>
+        <input type="button">
+        <label>BUTTON</label><br><br>
+        <input type="checkbox">
+        <label>CHECKBOX</label><br><br>
+        <input type="color">
+        <label>COLOR</label><br><br>
+        <input type="date">
+        <label>DATE</label><br><br>
+        <input type="datetime-local">
+        <label>DATETIME-LOCAL</label><br><br><br>
+        <input type="email">
+        <label>EMAIL</label><br><br><br>
+        <input type="file">
+        <label>FILE</label><br><br><br>
+        <input type= "hidden">
+        <label>HIDDEN</label><br><br><br>
+        <input type= "image">
+        <label>IMAGE</label><br><br><br>
+        <input type= "month">
+        <label>MONTH</label><br><br><br>
+        <input type="number">
+        <label>NUMBER</label><br><br><br>
+        <input type="password">
+        <label>PASSWORD</label><br><br><br>
+        <input type="radio">
+        <label>RADIO</label><br><br><br>
+        <label>SPORTS</label><br>
+        <input type="radio">
+        <label>cricket</label><br>
+        <input type="radio">
+        <label>Coco</label><br>
+        <input type="radio">
+        <label>Kabadi</label><br><br><br>
+        <input type="range">
+        <label>RANGE</label><br><br><br>
+        <input type="reset">
+        <label>RESET</label><br><br><br>
+        <input type="search">
+        <label>SEARCH</label><br><br><br>
+        <input type="submit">
+        <label>SUBMIT</label><br><br><br>
+        <input type="tel">
+        <label>TELEPHONE</label><br><br><br>
+        <input type="time">
+        <label>TIME</label><br><br><br>
+        <input type="url">
+        <label>URL</label><br><br><br>
+        <input type="week">
+        <label>WEEK</label><br><br><br>
+        <input type="image" src="TJSVD.jpg" alt="Submit" >
+        <label>IMAGE</label><br><br><br>
+        <br><br><br>
+
+        <table>
+           <tr>
+               <th>SID</th>
+               <th>SNAME</th>
+               <th>SPHONE</th>
+               <th>SCOURSE</th>
+           </tr>
+            <tr>
+                <td>501</td>
+                <td>Deekshitha</td>
+                <td>9722367447</td>
+                <td>python</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
