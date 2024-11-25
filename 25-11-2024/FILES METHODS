@@ -1,0 +1,50 @@
+import os
+file="C:/Users/Public/text_file5.txt"
+
+def file_write(file):
+    with open(file,"w") as fptr:
+        fptr.write("welcome the hyderabad")
+        print("text has been written to the desired file")
+def file_read(file):
+    with open(file,"r") as fptr:
+        res=fptr.read()
+        print("read successfully",res)
+
+def file_readlines_method(file):
+    with open(file,"r") as fptr:
+        res=fptr.readlines()
+        print("read successfully",res)
+
+def file_read_n_method(file):
+    with open(file, "r") as fptr:
+        res=fptr.read(5)
+        print("read successfully",res)
+
+def file_append(file):
+    with open(file, "a") as fptr:
+        fptr.write("\nGood Morning hyderabad")
+        print("text has been written to the desired file")
+
+
+def file_rename():
+    os.rename("C:/Users/Public/text_file5.txt","C:/Users/Public/text5.txt")
+
+def file_delete(file):
+    os.remove("C:/Users/Public/nov22.doc")
+    print("desired file is deleted")
+def file_seek_tell(file):
+    with open("C:/Users/Public/text5.txt","r") as fptr:
+        print("initial position of cursor:",fptr.tell())
+        fptr.seek(2)
+        print("after moved cursor to the desired location:",fptr.tell())
+        fptr.seek(5)
+        print("after moved cursor to the desired location:",fptr.tell())
+
+file_write(file)
+file_read(file)
+file_readlines_method(file)
+file_read_n_method(file)
+file_append(file)
+file_rename()
+file_delete(file)
+file_seek_tell(file)
