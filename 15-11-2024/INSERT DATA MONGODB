@@ -1,0 +1,15 @@
+import pymongo
+#write a code to connect mongodb as the client
+client=pymongo.MongoClient("mongodb://localhost:27017/")
+#WRITE a code to connect desired database over the mongodb
+db=client["ACT_DB"]
+#Write a code to connect collection/table
+coll=db["STUDENT_DETAILS"]
+#CREATE DATA IN THE FORM OF DICTIONARY/key:value pair
+data=[{"SID":501,"SNAME":"ANU","SCOURSE":"AIML","SPHONE":"9000950022"},
+      {"SID":502,"SNAME":"SRINI","SCOURSE":"SELENIUM","SPHONE":"9908133590"},
+      {"SID":503,"SNAME":"VENKAT","SCOURSE":"DATASCIENCE","SPHONE":"7799132754"},
+      {"SID":504,"SNAME":"SREEYA","SCOURSE":"IOT","SPHONE":"9876543210"}]
+X=coll.insert_many(data)
+print("data has been inserted into desired collection:\n")
+print("Primary Keys:\n",X.inserted_ids)
