@@ -1,0 +1,12 @@
+class base_class:
+    def base_method(self):
+        print("hey, Im base class")
+    def base_method1(self):
+        print("hey, Im second base class")
+class dervied_class(base_class):
+    def dervied_method(self):
+        print("hey, Im child class")
+obj=dervied_class()
+obj.base_method()
+obj.base_method1()
+obj.dervied_method()
