@@ -1,0 +1,17 @@
+class a:
+    x=1000
+    def x_method(self):
+        print(self.x)
+class b(a):
+    y=2000
+    def y_method(self):
+        print(self.y)
+class c(b):
+    z=3000
+    def z_method(self):
+        print(self.z)
+
+obj=c()
+obj.x_method()
+obj.y_method()
+obj.z_method()
