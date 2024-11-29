@@ -1,0 +1,28 @@
+class arithmatic_op:
+    pi=3.14
+    def __init__(self,v,n):
+        self.v=v
+        self.n=n
+    def sum(self):
+        return self.v+self.n+self.pi
+    def mul(self):
+        return self.v*self.n*self.pi
+class employee_manage:
+    def __init__(self,emp_id):
+        self.emp_id=emp_id
+    def emp_details(self):
+        name="Anu"
+        designation="manager"
+        position="senior"
+        print("emp details:",self.emp_id,name,designation,position)
+    def emp_sal_details(self):
+        basic=18000
+        hra=3000
+        bonus=5000
+        print("emp_salary:",self.emp_id,basic,hra,bonus)
+    def emp_deduction(self):
+        lop=2
+        tds=200
+        insurance=400
+        itd=9000
+        print("emp_deductions:",self.emp_id,lop,tds,insurance)
