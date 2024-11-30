@@ -1,0 +1,24 @@
+#one sub class can inherit or derived from more than one base class
+#x-->z
+#y-->z
+#p-->z
+class x:
+    fix_asset=1000000
+    def x_method(self):
+        print("x method:",self.fix_asset)
+
+
+class y:
+    y_fix_asset = 10000
+
+    def y_method(self):
+        print("y method:", self.y_fix_asset)
+class p:
+    p_fix_asset = 100
+
+    def p_method(self):
+        print("p method:", self.p_fix_asset)
+class z(x,y,p):
+    z_bank_bal=500000
+    def z_method(self):
+        print("z method:",self.z_bank_bal)
