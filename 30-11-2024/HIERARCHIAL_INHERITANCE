@@ -1,0 +1,85 @@
+class A:
+    A_val=1200
+    def A_method(self):
+        print("A method:",self.A_val)
+class B(A):
+    b_val=2344
+    def B_method(self):
+        print("B method:", self.b_val)
+class C(A):
+    c_val = 1000
+    def C_method(self):
+        print("C method:", self.c_val)
+class D(A):
+    d_val = 7000
+
+    def D_method(self):
+        print("C method:", self.d_val)
+class E(A):
+    e_val = 100000
+    def E_method(self):
+        print("E method:", self.e_val)
+class B1(B):
+    b1_val = 0000
+    def b1_method(self):
+        print("B1 method:", self.b1_val)
+class B2(B,E):
+    b2_val = 1111
+    def b2_method(self):
+        print("B2 method:", self.b2_val)
+class D1(D):
+    d1_val = 7777
+
+    def d1_method(self):
+        print("D1 method:", self.d1_val)
+class D2(D):
+    d2_val = 8888
+    def d2_method(self):
+        print("D2 method:", self.d2_val)
+class D11(D1):
+    d11_val=3333
+    def D11_method(self):
+        print("D11 Method:",self.d11_val)
+class E1(E):
+    e1_val=555
+    def e1_method(self):
+        print("E1 method:",self.e1_val)
+class E2(E,C):
+    e2_val=5550
+    def e2_method(self):
+        print("E2 method:",self.e2_val)
+class E21(E2):
+    e21_val=44444
+    def e21_method(self):
+        print("E11 method:",self.e21_val)
+
+
+'''
+#create an object for b1 and access b and a methods
+#create an object for d1 and access d and a methods
+#create an object for e1 and access e and a 
+
+
+#create an object b2 and access e methods?
+#create an object e2 and access c methods?
+'''
+ob1=E21()
+ob1.C_method()
+ob1.e21_method()
+ob1.e2_method()
+ob1.E_method()
+ob2=E1()
+ob2.e1_method()
+ob3=D11()
+ob3.D11_method()
+ob3.d1_method()
+ob3.D_method()
+ob4=D2()
+ob4.d2_method()
+ob5=B1()
+ob5.b1_method()
+ob5.B_method()
+ob6=B2()
+ob6.E_method()
+ob6.b2_method()
+ob5.A_method()
