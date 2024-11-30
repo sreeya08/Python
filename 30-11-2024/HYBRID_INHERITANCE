@@ -1,0 +1,19 @@
+#Its a combination of inheritances
+#x-->z, p-->y-->z
+class x:
+    def x_method(self):
+        print("x method")
+class p:
+    def p_method(self):
+        print("p method")
+class y(p):
+    def y_method(self):
+        print("y method")
+class z(x,y):
+    def z_method(self):
+        print("z method")
+ob=z()
+ob.x_method()
+ob.y_method()
+ob.p_method()
+ob.z_method()
