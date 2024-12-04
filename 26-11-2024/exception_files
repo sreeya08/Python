@@ -1,0 +1,11 @@
+file="C:/Users/Public/nov26.txt"
+
+def file_read(file):
+    try:
+        with open(file,"r") as fptr:
+            for line in fptr:
+                l=line.upper()
+                print(l)
+    except IOError:
+        print("unable read text as file does not exist")
+file_read(file) #function call
