@@ -1,0 +1,21 @@
+class arithmetic_op:
+    def sum(self,a,b):
+        return a+b
+    def mul(self,x,y):
+        return x*y
+    def sub(self,p,q):
+        return p-q
+    def mod(self,a,b):
+        return a%b
+    def div(self,c,d):
+        return c/d
+    def fact(self,k):
+        fact=1
+        for i in range(1,k+1):
+            fact=fact*i
+        return fact
+
+    def find_even_no(self,list1):
+        for n in list1:
+            if(n%2==0):
+               return n
