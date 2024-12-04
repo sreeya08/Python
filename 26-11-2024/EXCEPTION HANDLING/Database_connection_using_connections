@@ -1,0 +1,11 @@
+'''import pymysql
+try:
+     query="CREATE DATABASE ALLADI"
+     con=pymysql.connect(host="localhost",user="root",password="sree@0809")
+     cur=con.cursor()  #enable the access data globally or concurrently
+     cur.execute(query)
+     con.commit()
+     print("Database created successfully")
+     con.close()
+except:
+     print("Database not created due to runtime errors")'''
