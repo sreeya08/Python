@@ -1,0 +1,124 @@
+#1. Write Python Program to Read and Print Each Line in "egypt.txt" file.
+'''fptr=open("C:/Users/Public/egypt1.txt","r")
+print(fptr.read())
+fptr.close()'''
+
+#2 Program to Read and Print Each Line in "japan.txt" File Using
+# with Statement.
+'''file="C:/Users/Public/japan.txt"
+def file_read(file):
+    with open(file,"r") as fptr:
+        res=fptr.read()
+        print("read successfully",res)'''
+
+#3 Write Python Program to Read "rome.txt" File Using
+# read() Method.
+'''file1="C:/Users/Public/rome.txt"
+def file_read(file1):
+    with open(file1,"r") as fptr:
+        res=fptr.read()
+        print("read successfully",res)'''
+'''fptr=open("C:/Users/Public/rome.txt","r")
+print(fptr.read())
+fptr.close()'''
+
+#4.Consider the "rome.txt" File Specified in Program 9.3. Write
+# Python Program to Read "rome.txt" file Using readline() Method
+'''def file_readline_method(file):
+    with open(file,"r") as fptr:
+        res=fptr.readline("Rome is one of our most popular cities")
+        print("read successfully",res)'''
+#5.5.Consider the "rome.txt" File Specified in Program 9.3. Write
+# Python Program to Read "rome.txt" File Using readlines() Method
+'''def file_readlines_method(file):
+    with open(file,"r") as fptr:
+        res=fptr.readlines()
+        print("read successfully",res)'''
+#6.Consider "Sample_Program.py" Python file. Write Python program
+# to remove the comment character from all the lines in a given Python source
+# file. Sample content of "Sample_Program.py" Python file is given below
+'''file="c:/users/public/sample_program.py"
+with open(file,"w") as fptr:
+    fptr.write("#welcom world \n #good morning")
+def remove_comm(file):
+    with open(file, "r") as fptr:
+        for i in fptr:
+            i=i.replace("#","")
+            print(i)
+remove_comm(file)'''
+#7.Consider the File Structure Given Below. Write Python Program
+#to Delete All the Files and Subdirectories from the Extinct_Animals Directory
+'''import os
+import shutil
+path = r"C:\Users\Public\EXTRINCT_ANIMALS"
+file_path = os.path.join(path, "my_first_project.txt")  
+def create_and_write_file(file_path):
+    with open(file_path, 'w') as file:
+        file.write("This is my first project in Python.\n")
+        file.write("I am learning about file operations.\n")
+    print(f"Created and wrote to file: {file_path}")
+def read_file(file_path):
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as file:
+            content = file.read()
+            print("Content of the file:")
+            print(content)
+    else:
+        print(f"The file {file_path} does not exist.")
+def delete_all_files_and_subdirectories(directory):
+    if os.path.exists(directory):
+        for item in os.listdir(directory):
+            item_path = os.path.join(directory, item)
+            if os.path.isfile(item_path):
+                os.remove(item_path)
+                print(f"Deleted file: {item_path}")
+            elif os.path.isdir(item_path):
+                shutil.rmtree(item_path)
+                print(f"Deleted directory: {item_path}")
+    else:
+        print(f"The directory {directory} does not exist.")
+def greet_user(name):
+    print(f"Hello, {name}! Welcome to your first Python project.")
+if __name__ == "_main_":
+    user_name = input("Please enter your name: ")
+    greet_user(user_name)
+    create_and_write_file(file_path)
+    read_file(file_path)
+    delete_all_files_and_subdirectories(path)'''
+
+#8.Write Python Program to Count the Occurrences of Each Word
+# and Also Count the Number of Words in a "quotes.txt" File.Sample
+# Content of "quotes.txt" File is Given Below
+# Define the file name
+'''file_name = "C:/Users/Public/quotes.txt"
+with open(file_name,"w") as fptr:
+    fptr.write("welcom world \n good morning \n how are you")
+def count_words(file_name):
+    with open(file_name, 'r') as file:
+        content = file.read()
+        words = content.lower().split()
+        word_count = {}
+        for word in words:
+            word = word.strip('.,!?":;\'')
+            word_count[word] = word_count.get(word, 0) + 1
+        total_words = sum(word_count.values())
+        print("Occurrences of Each Word:")
+        for word, count in word_count.items():
+            print(f"{word}: {count}")
+        print(f"\nTotal Number of Words: {total_words}")
+count_words(file_name)'''
+
+#9.write Python Program to Find the Longest Word in a File.Get the File
+# Name from User. (Assume User Enters the File Name as "animals.txt" and its
+# Sample Contents are as Below)
+# Function to find the longest word in the file
+'''file_name = "C:/Users/Public/animals.txt"
+with open(file_name,"w") as fptr:
+    fptr.write("welcome to datascience course")
+def find_longest_word(file_name):
+    with open(file_name, 'r') as file:
+        words = file.read().split()
+        longest_word = max(words, key=len)
+        print(f"The longest word is: {longest_word}")
+        print(f"Length of the longest word: {len(longest_word)}")
+find_longest_word(file_name)'''
