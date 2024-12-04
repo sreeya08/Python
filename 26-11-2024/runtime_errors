@@ -1,0 +1,9 @@
+try:
+    x=20
+    print(x/0)
+except ZeroDivisionError:
+    print("numerator can not be divided by zero")
+else:
+    print("due to run time error,program might cause some problem")
+finally:
+    print("u have successfully completed transaction:")
