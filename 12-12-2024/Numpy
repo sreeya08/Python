@@ -1,0 +1,23 @@
+# LIST TO ARRAY:
+
+from numpy import array
+#create one dimension array using list data structure
+data=[100,200,300,400]  #list ds/ one_dim array
+data1_np=array(data)
+print("data created by list ds:",data)
+print("data creATED by numpy:",data1_np)
+print(data1_np.ndim)
+print(data1_np.shape)
+print(data1_np.size)
+print(data1_np.dtype)
+
+#create two dimension array using list data structure
+
+data_2d_list=[[12,23,3,4],[2,1,22,33]] #nested list
+data2_np=array(data_2d_list)
+print("data created by list ds:",data_2d_list)
+print("data creATED by numpy:",data2_np)
+print(data2_np.ndim)
+print(data2_np.shape)
+print(data2_np.size)
+print(data2_np.dtype)
