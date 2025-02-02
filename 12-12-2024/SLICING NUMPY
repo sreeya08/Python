@@ -1,0 +1,20 @@
+from numpy import vstack
+data=array([[11,22,33],[44,55,66],[77,88,99]])
+#extract 11 from the above data
+print("extract 11 from the above data",data[0:1,0:1])# before, : indicate from which row to which row
+#extract 44 from the above data
+print("extract 44 from the above data",data[1:2,0:1])
+#extract 55 from the above data
+print("extract 55 from the above data",data[1:2,1:2])
+#extract 99 from the above data
+print("extract 99 from the above data",data[2:3,2:3])
+#extract all rows and column from the data
+print("extract all rows and column from the data",data[0:3,0:3])
+#extract second rows and all the elements
+print("extract second rows and all the elements:",data[2:3,0:3])
+print(data[2,:])
+print("extract second column and all the rows:")
+vdata=data[:,2]
+print("\n",vstack(vdata))
+
+print("extract second column and all the rows:\n",data[0:3,2:3])
