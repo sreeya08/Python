@@ -1,0 +1,21 @@
+from numpy import array
+data=array([1,2,3,4,5])
+print("1D shape:",data.shape)
+data_2d=array([[1,2,5],[3,4,6]])
+print("2D shape:",data_2d.shape)
+print(data_2d.shape[0])
+print(data_2d.shape[1])
+dataset=array([[1,2,5],[3,4,6],[9,8,7]])  #3x3 matrix
+
+#write a code to reshape data set into 1 row 9 columns using reshape method
+data_reshape=dataset.reshape(1,9)
+print("reshape data set into 1 row 9 columns\n",data_reshape)
+print("\n original dataset \n",dataset)
+
+print(dataset.shape)
+print(data_reshape.shape)
+
+#write a code to reshape data set into 9 row 1 columns using reshape method
+data_reshape1=dataset.reshape(9,1)
+print("reshape data set into 9 row 1 columns\n",data_reshape1)
+print(data_reshape1.shape)
