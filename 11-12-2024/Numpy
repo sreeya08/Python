@@ -1,0 +1,27 @@
+#1D DATA ARRAY INDEXING
+
+print(data1_np[0])
+print(data1_np[-1])
+print(data1_np[0:3])
+
+
+
+print("abc",data2_np[0][0])
+print("abc",data2_np[0,1])
+print("abc",data2_np[0,2])
+print("abc",data2_np[0,3])
+print("abc",data2_np[1,0])
+print("abc",data2_np[1,1])
+print("abc",data2_np[1,2])
+print("abc",data2_np[1,3])
+print("xyz",data2_np[-1][-1])
+print("xyz",data2_np[-1][-2])
+print("xyz",data2_np[-1][-3])
+print("xyz",data2_np[-1][-4])
+print("xyz",data2_np[-2][-1])
+print("xyz",data2_np[-2][-2])
+print("xyz",data2_np[-2][-3])
+print("xyz",data2_np[-2][-4])
+print(data2_np[1,])
+print(data2_np[1:2,1:3])
+print(data2_np[1:1,1:1])
