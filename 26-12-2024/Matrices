@@ -1,0 +1,92 @@
+from numpy import array
+import numpy as np
+
+
+x=array([1,2,3,4,5])
+y=array([6,7,8,9,2])
+res=x+y
+print(res)
+a=np.array([[3,3.2],[3.5,3.6]])
+b=np.array([118.4,135.2])
+z=np.linalg.solve(a,b)
+print(z)
+
+print("\nSquare matrix\n")
+A=array([[2,5],[2,4]])
+print(A.ndim)
+print(A.shape)
+print(A.size)
+print(A.dtype)
+
+print("\nSymmetric matrix\n")
+#Symmetric matrix
+B=array([[1,2,3],
+   [2,1,2],
+   [3,2,1]])
+print(B)
+BT=B.T
+print(BT)
+
+print("\nTriangular Matric\n")
+#Triangular Matrix
+# define square 3x3  matrix
+from numpy import tril
+from numpy import triu
+Tri = array([
+    [1, 2, 3],
+    [2, 1, 2],
+    [3, 2, 1]
+])
+print(Tri)
+
+# lower triangular matrix
+
+lower = tril(Tri)
+print(lower)
+# upper triangular matrix
+upper = triu(Tri)
+print(upper)
+
+print("Diagonal Matrix\n")
+#Diagonal Matrix
+# define 5x3  matrix
+from numpy import diag
+Dia = array([
+    [1, 2, 3],
+    [2, 1, 2],
+    [3, 2, 1],
+    [1, 2, 3],
+    [2, 1, 2]
+])
+print(Dia)
+# get diagonal vector
+d = diag(Dia)
+print(d)
+# get diagonal matrix from vector
+D = diag(d)
+print(D)
+print("\nIdentity Matrix\n")
+#Identity Matrix
+from numpy import identity
+# identity matrix
+I = identity(10)
+print(I)
+
+print("\nOrthogonal Matrix\n")
+#Orthogonal Matrix
+from numpy.linalg import inv
+# define orthogonal matrix
+Q = array([
+    [1, 0],
+    [0, -1]
+])
+print(Q)
+# inverse equivalance
+V = inv(Q)
+print(V)
+# transposed
+Qt = Q.T
+print(Qt)
+# identity equivalence
+I = Q.dot(Qt)
+print(I)
